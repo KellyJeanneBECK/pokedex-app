@@ -34,18 +34,15 @@ function App() {
   // State pokmonIndex
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  // Fonctions pour changer de pokemon au click
-  const previousClick = () => {
-    setPokemonIndex(pokemonIndex - 1)
-  }
-  const nextClick = () => {
-    setPokemonIndex(pokemonIndex + 1)
+  // Fonction pour changer de pokemon au click
+  const pokemonClick = (pokemon) => {
+    setPokemonIndex(pokemon)
   }
 
   return (
     <div>
         <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-        <NavBar pokemonList={pokemonList} pokemonIndex={pokemonIndex} previousClick={previousClick} nextClick={nextClick} />
+        <NavBar pokemonList={pokemonList} pokemonClick={pokemonClick} />
     </div>
   );
 }
