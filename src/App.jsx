@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 import PokemonCard from "./components/PokemonCard"
+import NavBar from "./components/NavBar"
 import { useState } from "react"
 
 // Liste des pokemons
@@ -44,16 +45,9 @@ function App() {
   return (
     <div>
         <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-        {pokemonIndex > 0 ? <button onClick={previousClick}>Previous</button> : ""}
-        {pokemonIndex < pokemonList.length - 1 ? <button onClick={nextClick}>Next</button> : ""}
+        <NavBar pokemonList={pokemonList} pokemonIndex={pokemonIndex} previousClick={previousClick} nextClick={nextClick} />
     </div>
   );
 }
 
 export default App;
-
-// {indexPokemon > 0 ? <button onClick={previousClick}>Previous</button> : ""}
-// {indexPokemon < pokemonList.length - 1 ? <button onClick={nextClick}>Next</button> : ""}
-
-// <button onClick={previousClick}>Previous</button>
-// <button onClick={nextClick}>Next</button>
