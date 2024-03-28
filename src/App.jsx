@@ -51,9 +51,3 @@ function App() {
 }
 
 export default App;
-
-// {indexPokemon > 0 ? <button onClick={previousClick}>Previous</button> : ""}
-// {indexPokemon < pokemonList.length - 1 ? <button onClick={nextClick}>Next</button> : ""}
-
-// <button onClick={previousClick}>Previous</button>
-// <button onClick={nextClick}>Next</button>
