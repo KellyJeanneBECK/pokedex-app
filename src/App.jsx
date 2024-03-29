@@ -2,9 +2,10 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
+import { useState } from "react"
+import { useEffect } from "react"
 import PokemonCard from "./components/PokemonCard"
 import NavBar from "./components/NavBar"
-import { useState } from "react"
 
 // Liste des pokemons
 const pokemonList = [
@@ -30,6 +31,14 @@ const pokemonList = [
 ];
 
 function App() {
+
+  // Alerte qui s'affiche automatiquement au lancement de l'app
+  useEffect(
+    () => {
+      alert("Hello pokemon trainer :)")
+    },
+    []
+  )
 
   // State pokmonIndex
   const [pokemonIndex, setPokemonIndex] = useState(0);
